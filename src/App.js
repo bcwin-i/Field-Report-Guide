@@ -8,12 +8,12 @@ function App() {
   return (
     <>
       <Routes>
-        <Route index element={<Homepage />} />
-        {/* <Route path="/homepage" replace={true} element={<Dashboard />}>
-        <Route index path=":dashboard" element={<Dashboard />} />
-        <Route path=":ratings" element={<Dashboard />} />
-        <Route path=":ativities" element={<Dashboard />} />
-      </Route> */}
+        <Route index element={<AccountAcess />} />
+        <Route path="/homepage" replace={true} element={<Homepage />}>
+        <Route index path=":dashboard" element={<Homepage />} />
+        {/* <Route path=":ratings" element={<Dashboard />} />
+        <Route path=":ativities" element={<Dashboard />} /> */}
+      </Route>
       </Routes>
     </>
   );

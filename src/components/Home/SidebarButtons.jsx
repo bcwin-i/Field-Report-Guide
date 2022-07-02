@@ -1,12 +1,13 @@
 import React, { useContext, useState } from "react";
-// import { useNavigate } from "react-router-dom";
-// // import UserContext from "../../context/Auth/UserContext";
+import UserContext from "../../context/Authentication/UserContext";
+import { useNavigate } from "react-router-dom";
+// import UserContext from "../../context/Auth/UserContext";
 import { colors } from "../../utils/colors";
 
 export const SidebarButtons = ({ children, ...props }) => {
   const [hover, setHover] = useState(false);
-  // const { logout } = useContext(UserContext);
-  // const navigate = useNavigate();
+  const { logout } = useContext(UserContext);
+  const navigate = useNavigate();
 
   return (
     <button
@@ -34,11 +35,16 @@ export const SidebarButtons = ({ children, ...props }) => {
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       onClick={() =>
-      //   props.title === "Logout"
-      //     ? logout()
-      //     : navigate(`/homepage/:${props.title.toLowerCase()}`, { replace: true })
-      // }
-      console.log("Click")
+        props.title === "Logout"
+          ? logout()
+          : navigate(
+              `/homepage/:${
+                props.title.toLowerCase() === "profile at risk"
+                  ? "par"
+                  : props.title.toLowerCase()
+              }`,
+              { replace: true }
+            )
       }
     >
       {children}

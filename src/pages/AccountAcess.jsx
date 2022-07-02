@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import {
   AAInput,
   AALabel,
@@ -14,9 +14,49 @@ import Intro from "../assets/intro.svg";
 import { colors } from "../utils/colors";
 import { GButton } from "../components/Global/styles";
 import ClipLoader from "react-spinners/ClipLoader";
+import UserContext from "../context/Authentication/UserContext";
+
+const users = [
+  {
+    id: 1,
+    email: "kojo@gmail.com",
+    name: "Kojo Ntow",
+    password: "12345",
+  },
+  {
+    id: 2,
+    email: "glydetek@gmail.com",
+    name: "Yaw Nick",
+    password: "12345",
+  },
+];
 
 const AccountAcess = () => {
+  const { login } = useContext(UserContext);
   const [loading, setLoading] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+
+  const request = async () => {
+    setError("");
+    setLoading(true);
+    if (email === "" || password === "") {
+      setError("Fill inputs!");
+      setLoading(false);
+    } else {
+      let user = false;
+      await users.forEach((data) => {
+        if (data.email === email) if (data.password === password) login(data)
+      });
+
+      // if (user) login(user)
+      // else {
+      //   setLoading(false);
+      //   setError("Unknown account!");
+      // }
+    }
+  };
 
   return (
     <AccountAccessBody>
@@ -40,28 +80,49 @@ const AccountAcess = () => {
             Welcome to FRG
           </AppDesc>
           <AALabel>User name or Email</AALabel>
-          <AAInput type={"email"} />
+          <AAInput
+            type={"email"}
+            onChange={(event) => setEmail(event.target.value)}
+          />
 
           <AALabel>Password</AALabel>
-          <AAInput type={"password"} />
-          <p
+          <AAInput
+            type={"password"}
+            onChange={(event) => setPassword(event.target.value)}
+          />
+          <div
             style={{
-              fontSize: 12,
-              textAlign: "end",
-              width: "100%",
+              display: "flex",
+              flexDirection: "column",
               marginTop: -10,
               marginBottom: 20,
             }}
           >
-            Forgot password?
-          </p>
+            <text
+              style={{
+                fontSize: 12,
+                color: "red",
+                flex: 1,
+                textAlign: "center",
+              }}
+            >
+              {error}
+            </text>
+            <text
+              style={{
+                fontSize: 12,
+              }}
+            >
+              Forgot password?
+            </text>
+          </div>
           <GButton
             background={colors.accent}
             color={colors.primary}
-            onClick={() => setLoading(!loading)}
+            onClick={() => request()}
           >
             {loading ? (
-              <ClipLoader loading={true} size={20} color={colors.primary} />
+              <ClipLoader loading={true} size={20} color={colors.secondary} />
             ) : (
               "Sign in"
             )}

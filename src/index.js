@@ -5,15 +5,18 @@ import App from "./App";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
-import "./utils/fonts/Poppins-Light.ttf"
-import "./utils/fonts/Poppins-Medium.ttf"
-import "./utils/fonts/Poppins-SemiBold.ttf"
+import "./utils/fonts/Poppins-Light.ttf";
+import "./utils/fonts/Poppins-Medium.ttf";
+import "./utils/fonts/Poppins-SemiBold.ttf";
+import UserProvider from "./context/Authentication/UserProvider";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <UserProvider>
+        <App />
+      </UserProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

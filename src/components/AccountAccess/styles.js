@@ -43,6 +43,10 @@ export const AppName = styled.h3`
   font-weight: bold;
   color: ${colors.primary};
   margin-bottom: 5px;
+
+  @media (max-width: 768px) {
+    font-size: 17px;
+  }
 `;
 
 export const AppDesc = styled.p`

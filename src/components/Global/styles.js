@@ -6,7 +6,7 @@ export const GButton = styled.button`
     background-color: ${props => props.background};
     color: ${props => props.color};
     padding: 5px 20px;
-    width: 100px;
+    min-width: 100px;
     transition: 0.5s ease-in-out all;
     display: flex;
     justify-content: center;
