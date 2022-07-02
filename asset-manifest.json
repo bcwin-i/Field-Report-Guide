@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Field-Report-Guide/static/css/main.df5bb766.css",
+    "main.js": "/Field-Report-Guide/static/js/main.a643317a.js",
+    "static/js/787.8a5e41ae.chunk.js": "/Field-Report-Guide/static/js/787.8a5e41ae.chunk.js",
+    "static/media/Poppins-Light.ttf": "/Field-Report-Guide/static/media/Poppins-Light.7641a0f76ca9ef6c252c.ttf",
+    "static/media/Poppins-Medium.ttf": "/Field-Report-Guide/static/media/Poppins-Medium.673ed42382ab264e0bf5.ttf",
+    "static/media/Poppins-SemiBold.ttf": "/Field-Report-Guide/static/media/Poppins-SemiBold.ac8d04b620e54be9b0f0.ttf",
+    "service-worker.js": "/Field-Report-Guide/service-worker.js",
+    "static/media/icon.png": "/Field-Report-Guide/static/media/icon.7438dc164e83a1a154f5.png",
+    "static/media/intro.svg": "/Field-Report-Guide/static/media/intro.6c3ae1761e4287764d6347a84c555d8e.svg",
+    "static/media/dashboard2.svg": "/Field-Report-Guide/static/media/dashboard2.4fc56271abe452c30505d8d0f91193b8.svg",
+    "static/media/dashboard.svg": "/Field-Report-Guide/static/media/dashboard.734c0e0b4a903c22ee4b7028addfa8e6.svg",
+    "index.html": "/Field-Report-Guide/index.html",
+    "main.df5bb766.css.map": "/Field-Report-Guide/static/css/main.df5bb766.css.map",
+    "main.a643317a.js.map": "/Field-Report-Guide/static/js/main.a643317a.js.map",
+    "787.8a5e41ae.chunk.js.map": "/Field-Report-Guide/static/js/787.8a5e41ae.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.df5bb766.css",
+    "static/js/main.a643317a.js"
+  ]
+}
