@@ -32,7 +32,7 @@ export const AccountAccessDiv = styled.div`
 
   @media (max-width: 768px) {
     flex: 1;
-    display: ${props=> props.hide ? "none" : "flex"};
+    display: ${(props) => (props.hide ? "none" : "flex")};
   }
 `;
 
@@ -64,6 +64,11 @@ export const IntroImg = styled.img`
 export const IntroIcon = styled.img`
   width: 80px;
   height: 80px;
+
+  @media (max-width: 851px) {
+    width: 50px;
+    height: 50px;
+  }
 `;
 
 export const AALabel = styled.text`

@@ -13,6 +13,7 @@ export const DashboardDiv = styled.div`
   display: flex;
   overflow: hidden;
   position: relative;
+  cursor: pointer;
 `;
 
 export const Dashbg = styled.img`
@@ -47,5 +48,5 @@ export const DashItemsGroup = styled.div`
 export const DashLine = styled.div`
     border-bottom: 1px dotted white;
     flex: 1;
-    margin: 0 10px
+    margin: 0 1%;
 `

@@ -1,5 +1,8 @@
 import styled from "styled-components";
 import { colors } from "../../utils/colors";
+import { FaUserCircle } from "react-icons/fa";
+import { TbChartInfographic } from "react-icons/tb";
+import { MdSpaceDashboard, MdGroupWork } from "react-icons/md";
 
 export const HomeBody = styled.div`
   min-height: 100vh;
@@ -62,3 +65,63 @@ export const BottomNavigationButton = styled.div`
   flex-direction: column;
   align-items: center;
 `;
+
+export const SidebarButtonContainer = styled.button`
+  display: none;
+  background: none;
+  color: ${({ active }) => (active ? colors.accent : colors.primary)};
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-weight: 400;
+  background-color: ${({ active }) =>
+    active ? colors.primary : colors.accent};
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+  padding: 15px;
+  padding-left: 20px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  border: none;
+
+  :hover {
+    background-color: ${colors.secondary};
+  }
+
+  @media (max-width: 851px) {
+    text-align: left;
+    font-size: 12px;
+    padding: 10px;
+    padding-left: 10px;
+    margin-bottom: 7.5px;
+  }
+`;
+
+export const IconPar = styled(TbChartInfographic)`
+  width: ${({active})=> active ? "24px" : "24px"};
+  height: ${({active})=> active ? "24px" : "24px"};
+  color: ${({active})=> active ? colors.primary : colors.secondary};
+  transition: 0.5s all ease-in-out;
+`
+
+export const IconGroups = styled(MdGroupWork)`
+  width: ${({active})=> active ? "24px" : "24px"};
+  height: ${({active})=> active ? "24px" : "24px"};
+  color: ${({active})=> active ? colors.primary : colors.secondary};
+  transition: 0.5s all ease-in-out;
+`
+
+export const IconDashboard = styled(MdSpaceDashboard)`
+  width: ${({active})=> active ? "24px" : "24px"};
+  height: ${({active})=> active ? "24px" : "24px"};
+  color: ${({active})=> active ? colors.primary : colors.secondary};
+  transition: 0.5s all ease-in-out;
+`
+
+export const IconUser = styled(FaUserCircle)`
+  width: ${({active})=> active ? "24px" : "24px"};
+  height: ${({active})=> active ? "24px" : "24px"};
+  color: ${({active})=> active ? colors.primary : colors.secondary};
+  transition: 0.5s all ease-in-out;
+`

@@ -11,9 +11,8 @@ const UserProvider = ({ children }) => {
     const data = JSON.parse(localStorage.getItem("userData"));
     if (data?.auth) {
       setUser(data);
-      navigate("/homepage/:dashboard", {
-        replace: true,
-      });
+      console.log("Url: ",window.location.href)
+      navigate(window.location.href);
     } else navigate("/");
   }, []);
 

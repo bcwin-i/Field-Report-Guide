@@ -23,6 +23,13 @@ import {
 } from "../components/Home/styles";
 import { colors } from "../utils/colors";
 import Dashboard from "./SubPages/Dashboard";
+import {
+  IconDashboard,
+  IconGroups,
+  IconPar,
+  IconUser,
+} from "../components/Home/styles";
+import Groups from "./SubPages/Groups";
 
 const Homepage = () => {
   const [sideNav, setSideNav] = useState(true);
@@ -108,62 +115,60 @@ const Homepage = () => {
           </div>
         </TitleBar>
         <div style={{ flex: 1, overflowY: "scroll" }}>
-          <Dashboard />
+          {page === "dashboard" ? <Dashboard /> : <Groups />}
         </div>
         <BottomNavigation>
-          <BottomNavigationButton onClick={() =>
+          <BottomNavigationButton
+            onClick={() =>
               navigate(
                 `/homepage/:dashboard
-               `,
-                { replace: true }
+               `
               )
-            }>
-            <MdSpaceDashboard
-              size={16}
-              color={page === "dashboard" ? colors.primary : colors.secondary}
-            />
-            <AppDesc style={{ color: colors.primary }}>Home</AppDesc>
+            }
+          >
+            <IconDashboard active={page === "dashboard"} />
+            <AppDesc style={{ color: colors.primary, userSelect: "none" }}>
+              Home
+            </AppDesc>
           </BottomNavigationButton>
-          <BottomNavigationButton onClick={() =>
+          <BottomNavigationButton
+            onClick={() =>
               navigate(
                 `/homepage/:groups
-               `,
-                { replace: true }
+               `
               )
-            }>
-            <MdGroupWork
-              size={16}
-              color={page === "groups" ? colors.primary : colors.secondary}
-            />
-            <AppDesc style={{ color: colors.primary }}>Groups</AppDesc>
+            }
+          >
+            <IconGroups active={page === "groups"} />
+            <AppDesc style={{ color: colors.primary, userSelect: "none" }}>
+              Groups
+            </AppDesc>
           </BottomNavigationButton>
-          <BottomNavigationButton onClick={() =>
+          <BottomNavigationButton
+            onClick={() =>
               navigate(
                 `/homepage/:par
-               `,
-                { replace: true }
+               `
               )
-            }>
-            <TbChartInfographic
-              size={16}
-              color={page === "par" ? colors.primary : colors.secondary}
-            />
-            <AppDesc style={{ color: colors.primary }}>PAR</AppDesc>
+            }
+          >
+            <IconPar active={page === "par"} />
+            <AppDesc style={{ color: colors.primary, userSelect: "none" }}>
+              PAR
+            </AppDesc>
           </BottomNavigationButton>
           <BottomNavigationButton
             onClick={() =>
               navigate(
                 `/homepage/:profile
-               `,
-                { replace: true }
+               `
               )
             }
           >
-            <FaUserCircle
-              size={16}
-              color={page === "profile" ? colors.primary : colors.secondary}
-            />
-            <AppDesc style={{ color: colors.primary }}>Profile</AppDesc>
+            <IconUser active={page === "profile"} />
+            <AppDesc style={{ color: colors.primary, userSelect: "none" }}>
+              Profile
+            </AppDesc>
           </BottomNavigationButton>
         </BottomNavigation>
       </HomeContainer>
