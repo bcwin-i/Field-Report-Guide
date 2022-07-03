@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Field-Report-Guide/static/css/main.df5bb766.css",
-    "main.js": "/Field-Report-Guide/static/js/main.ef3f2173.js",
+    "main.js": "/Field-Report-Guide/static/js/main.e9b60b22.js",
     "static/js/787.8a5e41ae.chunk.js": "/Field-Report-Guide/static/js/787.8a5e41ae.chunk.js",
     "static/media/1.jpg": "/Field-Report-Guide/static/media/1.127b61129d28cc496c14.jpg",
     "static/media/Poppins-Light.ttf": "/Field-Report-Guide/static/media/Poppins-Light.7641a0f76ca9ef6c252c.ttf",
@@ -17,11 +17,11 @@
     "static/media/dashboard.svg": "/Field-Report-Guide/static/media/dashboard.734c0e0b4a903c22ee4b7028addfa8e6.svg",
     "index.html": "/Field-Report-Guide/index.html",
     "main.df5bb766.css.map": "/Field-Report-Guide/static/css/main.df5bb766.css.map",
-    "main.ef3f2173.js.map": "/Field-Report-Guide/static/js/main.ef3f2173.js.map",
+    "main.e9b60b22.js.map": "/Field-Report-Guide/static/js/main.e9b60b22.js.map",
     "787.8a5e41ae.chunk.js.map": "/Field-Report-Guide/static/js/787.8a5e41ae.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.df5bb766.css",
-    "static/js/main.ef3f2173.js"
+    "static/js/main.e9b60b22.js"
   ]
 }
