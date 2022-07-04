@@ -94,7 +94,7 @@ const Homepage = () => {
         )}
         <TitleBar>
           <AppName style={{ margin: 0, textTransform: "capitalize" }}>
-            {page === "par" ? "Profile at Risk" : page}
+            {page === "par" ? "Portfolio at Risk" : page}
           </AppName>
           <div
             style={{

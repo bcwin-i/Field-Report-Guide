@@ -1,23 +1,38 @@
 import React, { useEffect, useState } from "react";
 import GaugeChart from "react-gauge-chart";
-import { AppDesc } from "../../components/AccountAccess/styles";
 import { colors } from "../../utils/colors";
 
 import { BsInfoCircleFill } from "react-icons/bs";
 import { DashboardBody } from "../../components/Home/Dashboard/styles";
-import { GroupOthers } from "../../components/Home/Groups/styles";
 
 const PAR = () => {
   const [rate, setRate] = useState(0);
+  const [message, setMessage] = useState(0);
+
+  const genRand = (min, max, decimalPlaces)=> {
+    var rand =
+      Math.random() < 0.5
+        ? (1 - Math.random()) * (max - min) + min
+        : Math.random() * (max - min) + min; // could be min or max or anything in between
+    var power = Math.pow(10, decimalPlaces);
+    return Math.floor(rand * power) / power;
+  }
 
   useEffect(() => {
-    const precision = 10;
-    const randomNum =
-      Math.floor(
-        Math.random() * (10 * precision - 1 * precision) + 1 * precision
-      ) /
-      (1 * precision);
+    const randomNum = genRand(0, 1, 2)
     setRate(randomNum);
+    let num = randomNum * 100;
+    if (num <= 5) {
+      setMessage(" is Strong.");
+    } else if (num === 5) {
+      setMessage(" is Satisfactory");
+    } else if (num > 5 && num <= 10) {
+      setMessage(" is UnSatisfatory");
+    } else if (num > 10 && num <= 15) {
+      setMessage(" is UnSatisfatory");
+    } else {
+      setMessage(" is Critical");
+    }
   }, []);
 
   return (
@@ -39,7 +54,7 @@ const PAR = () => {
         needleBaseColor={colors.primary}
         textColor={colors.primary}
         needleColor={colors.secondary}
-        percent={rate * 0.1}
+        percent={rate}
         arcPadding={0.02}
       />
       <p
@@ -65,7 +80,7 @@ const PAR = () => {
         >
           <BsInfoCircleFill color={colors.secondary} size={25} />
           <span style={{ fontWeight: "bold", marginLeft: 10, fontSize: 20 }}>
-            {Math.round(rate * 10)}% is Great
+            {rate * 100}% {message}
           </span>
         </span>
         Portfolio at risk or PAR is the type of ratio that usually is used in
