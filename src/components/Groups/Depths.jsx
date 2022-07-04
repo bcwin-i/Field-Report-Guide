@@ -22,6 +22,7 @@ import GroupsData from "../../utils/data";
 import { RiSecurePaymentFill } from "react-icons/ri";
 import { AAInput } from "../AccountAccess/styles";
 import { GiCancel } from "react-icons/gi";
+import PaymentSheet from "./Sheets/PaymentSheet";
 
 const Depths = ({ on }) => {
   const [searchFocus, setSearchFocus] = useState(false);
@@ -138,61 +139,7 @@ const Depths = ({ on }) => {
           </div>
         </GroupContainer>
       ))}
-      <ApproveContainer on={approve}>
-        <div
-          style={{
-            backgroundColor: "white",
-            borderRadius: 10,
-            display: "flex",
-            height: "max-content",
-            padding: "5%",
-            flexDirection: "column",
-            marginTop: "10%",
-            alignItems: "center",
-            position: "relative",
-          }}
-          onClick={() => null}
-        >
-          <GiCancel
-            style={{ position: "absolute", top: "2.5%", right: "2.5%", cursor: "pointer" }}
-            color={colors.secondary}
-            size={30}
-            onClick={() => toggle(null, false)}
-          />
-          <RiSecurePaymentFill size={50} color={colors.secondary} />
-          <GroupName>Approve payment</GroupName>
-          <GroupIns>Confirm the payment below</GroupIns>
-          <AAInput
-            type={"number"}
-            onChange={(event) => console.log(event.target.value)}
-          />
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "space-between",
-              marginTop: 20,
-            }}
-          >
-            <GroupButton
-              background={colors.primary}
-              color={colors.accent}
-              style={{ marginRight: 10 }}
-              onClick={() => toggle(data, true)}
-            >
-              Group Payment
-            </GroupButton>
-
-            <GroupButton
-              background={colors.accent}
-              color={colors.primary}
-              onClick={() => toggle(data, true)}
-            >
-              Individual Payment
-            </GroupButton>
-          </div>
-        </div>
-      </ApproveContainer>
+      <PaymentSheet toggle={toggle} data={data} on={approve}/>
     </GroupShowType>
   );
 };

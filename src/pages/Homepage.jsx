@@ -30,6 +30,8 @@ import {
   IconUser,
 } from "../components/Home/styles";
 import Groups from "./SubPages/Groups";
+import PAR from "./SubPages/PAR";
+import Profile from "./SubPages/Profile";
 
 const Homepage = () => {
   const [sideNav, setSideNav] = useState(true);
@@ -115,7 +117,13 @@ const Homepage = () => {
           </div>
         </TitleBar>
         <div style={{ flex: 1, overflowY: "scroll" }}>
-          {page === "dashboard" ? <Dashboard /> : <Groups />}
+          {page === "dashboard" ? (
+            <Dashboard />
+          ) : page === "groups" ? (
+            <Groups />
+          ) : page === "par" ? (
+            <PAR />
+          ) : <Profile />}
         </div>
         <BottomNavigation>
           <BottomNavigationButton
