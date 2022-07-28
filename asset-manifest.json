@@ -1,27 +1,29 @@
 {
   "files": {
     "main.css": "/Field-Report-Guide/static/css/main.df5bb766.css",
-    "main.js": "/Field-Report-Guide/static/js/main.d9720eda.js",
+    "main.js": "/Field-Report-Guide/static/js/main.86bd261d.js",
     "static/js/787.8a5e41ae.chunk.js": "/Field-Report-Guide/static/js/787.8a5e41ae.chunk.js",
     "static/media/1.jpg": "/Field-Report-Guide/static/media/1.127b61129d28cc496c14.jpg",
     "static/media/Poppins-Light.ttf": "/Field-Report-Guide/static/media/Poppins-Light.7641a0f76ca9ef6c252c.ttf",
     "static/media/Poppins-Medium.ttf": "/Field-Report-Guide/static/media/Poppins-Medium.673ed42382ab264e0bf5.ttf",
     "static/media/Poppins-SemiBold.ttf": "/Field-Report-Guide/static/media/Poppins-SemiBold.ac8d04b620e54be9b0f0.ttf",
     "static/media/2.jpg": "/Field-Report-Guide/static/media/2.dcdd8c6d3f7d4aae1173.jpg",
+    "static/media/2440499.png": "/Field-Report-Guide/static/media/2440499.cd56bb31e8e883b3f644.png",
     "static/media/0.jpg": "/Field-Report-Guide/static/media/0.b1558f3d461c1ea28324.jpg",
     "service-worker.js": "/Field-Report-Guide/service-worker.js",
     "static/media/3.png": "/Field-Report-Guide/static/media/3.ab32eeee34bfe2db1092.png",
     "static/media/icon.png": "/Field-Report-Guide/static/media/icon.7438dc164e83a1a154f5.png",
+    "static/media/lawyer.svg": "/Field-Report-Guide/static/media/lawyer.f9bb13f9ed24b820a94c962573c03c1c.svg",
     "static/media/intro.svg": "/Field-Report-Guide/static/media/intro.6c3ae1761e4287764d6347a84c555d8e.svg",
     "static/media/dashboard2.svg": "/Field-Report-Guide/static/media/dashboard2.4fc56271abe452c30505d8d0f91193b8.svg",
     "static/media/dashboard.svg": "/Field-Report-Guide/static/media/dashboard.734c0e0b4a903c22ee4b7028addfa8e6.svg",
     "index.html": "/Field-Report-Guide/index.html",
     "main.df5bb766.css.map": "/Field-Report-Guide/static/css/main.df5bb766.css.map",
-    "main.d9720eda.js.map": "/Field-Report-Guide/static/js/main.d9720eda.js.map",
+    "main.86bd261d.js.map": "/Field-Report-Guide/static/js/main.86bd261d.js.map",
     "787.8a5e41ae.chunk.js.map": "/Field-Report-Guide/static/js/787.8a5e41ae.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.df5bb766.css",
-    "static/js/main.d9720eda.js"
+    "static/js/main.86bd261d.js"
   ]
 }
