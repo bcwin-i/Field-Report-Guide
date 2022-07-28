@@ -57,8 +57,8 @@ export const AppDesc = styled.p`
 `;
 
 export const IntroImg = styled.img`
-  width: 250px;
-  height: 250px;
+  width: 270px;
+  height: 270px;
 `;
 
 export const IntroIcon = styled.img`

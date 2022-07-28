@@ -11,6 +11,7 @@ import {
   IntroImg,
 } from "../components/AccountAccess/styles";
 import Intro from "../assets/intro.svg";
+import lawyer from "../assets/lawyer.svg";
 import { colors } from "../utils/colors";
 import { GButton } from "../components/Global/styles";
 import ClipLoader from "react-spinners/ClipLoader";
@@ -47,7 +48,7 @@ const AccountAcess = () => {
     } else {
       let user = false;
       await users.forEach((data) => {
-        if (data.email === email) if (data.password === password) login(data)
+        if (data.email === email) if (data.password === password) login(data);
       });
 
       // if (user) login(user)
@@ -65,14 +66,20 @@ const AccountAcess = () => {
           backgroundColor={colors.secondary}
           width={60}
           hide={true}
+          style={{justifyContent: "center"}}
         >
-          <IntroImg src={Intro} alt="Introduction" />
+        <>
+          <IntroImg
+            src={require("../assets/2440499.png")}
+            style={{ width: 350, height: "auto", borderRadius: 10, marginBottom: 10 }}
+            alt="Introduction"
+          />
           <AppName>Field Record Guide</AppName>
           <AppDesc>
             A simple system for recording data in the field. Gather, save, and
             update any necessary data.
           </AppDesc>
-          <AppDesc></AppDesc>
+          </>
         </AccountAccessDiv>
         <AccountAccessDiv backgroundColor="white" width={40}>
           <IntroIcon src={require("../assets/icon.png")} alt="icon" />
